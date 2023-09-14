@@ -32,15 +32,15 @@ public class CustomerServiceImple implements ICustomerService {
 			}
 		}
 		if (amount > 50000) {
-			apiResponse.setData("ENTER PAN CARD NUMBER");
+			apiResponse.setData("ENTER PAN CARD NUMBER :");
 			obj.setBalance(obj.getBalance() + amount);
-			apiResponse.setData("Amount deposited successfully:Balance=" + obj.getBalance());
+			apiResponse.setData("Amount deposited successfully:Balance =" + obj.getBalance());
 			apiResponse.setStatus(500);
 		}
 
 		else {
 			obj.setBalance(obj.getBalance() + amount);
-			apiResponse.setData("Amount deposited successfully:Balance=" + obj.getBalance());
+			apiResponse.setData("Amount deposited successfully:Balance =" + obj.getBalance());
 			apiResponse.setStatus(500);
 		}
 
@@ -63,7 +63,7 @@ public class CustomerServiceImple implements ICustomerService {
 				}
 				b.setBalance(b.getBalance() - amount);
 
-				apiResponse.setData("Amount withdrawn successfully.Balance=" + b.getBalance());
+				apiResponse.setData("Amount withdrawn successfully : Balance =" + b.getBalance());
 				apiResponse.setStatus(200);
 				break;
 			}
@@ -102,7 +102,7 @@ public class CustomerServiceImple implements ICustomerService {
 		}
 		obj2.setBalance(obj2.getBalance()+amount);
 		obj1.setBalance(obj1.getBalance()-amount);
-		apiResponse.setData("Amount transferred successfully");
+		apiResponse.setData("Amount transferred successfully!!!");
 		apiResponse.setStatus(200);
 		return apiResponse;
 
